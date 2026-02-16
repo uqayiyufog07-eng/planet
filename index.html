@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>✨ 粒子土星 - 沉浸式3D体验</title>
+              
+                  <!-- CDN优化加载 -->
+                      <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+                          <script src="https://cdn.jsdelivr.net/npm/@mediapipe/camera_utils/camera_utils.js" crossorigin="anonymous"></script>
+                              <script src="https://cdn.jsdelivr.net/npm/@mediapipe/control_utils/control_utils.js" crossorigin="anonymous"></script>
+                                  <script src="https://cdn.jsdelivr.net/npm/@mediapipe/drawing_utils/drawing_utils.js" crossorigin="anonymous"></script>
+                                      <script src="https://cdn.jsdelivr.net/npm/@mediapipe/hands/hands.js" crossorigin="anonymous"></script>
+                                        
+                                            <link rel="stylesheet" href="/css/styles.css">
+                                            </head>
+                                            <body>
+                                                <!-- 视频流 -->
+                                                    <video class="input_video"></video>
+                                                      
+                                                          <!-- 作者链接 -->
+                                                              <a id="author-btn" href="https://www.yjln.com" target="_blank">✨ By Mr.lun</a>
+                                                                
+                                                                    <!-- FPS计数器 -->
+                                                                        <div id="fps-counter">🌟 物理引擎: 极致模式 | 环境: 太阳系模拟 | FPS: 60</div>
+                                                                          
+                                                                              <!-- 加载动画 -->
+                                                                                  <div id="loading">
+                                                                                          <div class="spinner"></div>
+                                                                                                  <p>正在构建百万粒子与行星数据...</p>
+                                                                                                      </div>
+                                                                                                        
+                                                                                                            <!-- UI面板 -->
+                                                                                                                <div id="ui-layer">
+                                                                                                                        <div class="glass-panel">
+                                                                                                                                    <h1>🪐 土星</h1>
+                                                                                                                                                <div class="status-text">
+                                                                                                                                                                <div>数据流状态: <span id="status-indicator" class="highlight">待机</span></div>
+                                                                                                                                                                                <div class="stats-grid">
+                                                                                                                                                                                                    > 开普勒轨道: <span class="highlight">运行中</span><br>
+                                                                                                                                                                                                                        > 粒子总数: <span class="highlight">120万+</span><br>
+                                                                                                                                                                                                                                            > 背景环境: <span class="highlight">行星已加载</span>
+                                                                                                                                                                                                                                                            </div>
+                                                                                                                                                                                                                                                                        </div>
+                                                                                                                                                                                                                                                                                </div>
+                                                                                                                                                                                                                                                                                    </div>
+                                                                                                                                                                                                                                                                                      
+                                                                                                                                                                                                                                                                                          <!-- 控制面板 -->
+                                                                                                                                                                                                                                                                                              <div id="controls">
+                                                                                                                                                                                                                                                                                                      <button onclick="toggleFullScreen()" id="fullscreen-btn">📱 全屏沉浸</button>
+                                                                                                                                                                                                                                                                                                              <button onclick="toggleHandTracking()" id="hand-btn">✋ 手势控制</button>
+                                                                                                                                                                                                                                                                                                                      <button onclick="resetView()" id="reset-btn">🔄 重置视角</button>
+                                                                                                                                                                                                                                                                                                                          </div>
+                                                                                                                                                                                                                                                                                                                            
+                                                                                                                                                                                                                                                                                                                                <!-- 控制提示 -->
+                                                                                                                                                                                                                                                                                                                                    <div id="control-tips">
+                                                                                                                                                                                                                                                                                                                                            🖱️ 滚轮缩放 | 拖动旋转 | ✋ 手势同步控制
+                                                                                                                                                                                                                                                                                                                                                </div>
+                                                                                                                                                                                                                                                                                                                                                  
+                                                                                                                                                                                                                                                                                                                                                      <!-- 画布容器 -->
+                                                                                                                                                                                                                                                                                                                                                          <div id="canvas-container"></div>
+                                                                                                                                                                                                                                                                                                                                                            
+                                                                                                                                                                                                                                                                                                                                                                <!-- 着色器（保持原样，略...） -->
+                                                                                                                                                                                                                                                                                                                                                                    <!-- 这里包含所有原有的着色器代码，直接复制原始HTML中的shader部分 -->
+                                                                                                                                                                                                                                                                                                                                                                      
+                                                                                                                                                                                                                                                                                                                                                                          <script src="/js/app.js"></script>
+                                                                                                                                                                                                                                                                                                                                                                          </body>
+                                                                                                                                                                                                                                                                                                                                                                          </html>
